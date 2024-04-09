@@ -22,7 +22,8 @@ function ChatEntry({ message }: ChatEntryProps) {
       )}
       <Alert
         className={
-          "flex-wrap p-2" + (message.author === "BOT" ? " bg-green-600" : "")
+          "flex-wrap p-2" +
+          (message.author === "BOT" ? " " : " text-black bg-white")
         }
       >
         <AlertDescription>{message.text}</AlertDescription>

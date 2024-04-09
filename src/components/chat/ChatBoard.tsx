@@ -17,28 +17,17 @@ function ChatBoard() {
   }
 
   return (
-    <div className="flex flex-col w-full h-screen bg-red-200">
-      <div className="flex flex-col flex-grow gap-4 p-2 overflow-auto bg-purple-500">
+    <div className="flex flex-col w-full h-screen">
+      <div className="flex flex-col flex-grow gap-4 p-2 overflow-auto ">
         {content}
       </div>
-      <div className="flex flex-row items-center p-2 border-t-2 bg-blue-400">
+      <div className="flex flex-row items-center p-2 border-t-2">
         <Input id="chatInput" className="mr-2" />
         <Button variant="outline" size="icon">
           <ChevronRight className="h-4 w-4" />
         </Button>
       </div>
     </div>
-    // <div>
-    //   <div className="flex flex-col flex-grow gap-4 p-2 bg-purple-500">
-    //     <div className="overflow-scroll">{content}</div>
-    //   </div>
-    //   <div className="flex flex-row items-center p-2 border-t-2 bg-blue-400">
-    //     <Input id="chatInput" className="mr-2" />
-    //     <Button variant="outline" size="icon">
-    //       <ChevronRight className="h-4 w-4" />
-    //     </Button>
-    //   </div>
-    // </div>
   );
 }
 
