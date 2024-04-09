@@ -10,7 +10,7 @@ interface Language {
 
 interface Date {
   year: number;
-  month: number;
+  month: Month;
   day: number;
 }
 
@@ -115,4 +115,21 @@ interface Message {
   text: string;
 }
 
-export type { LinkedInProfile, Message };
+enum Month {
+  January = 0,
+  February = 1,
+  March = 2,
+  April = 3,
+  May = 4,
+  June = 5,
+  July = 6,
+  August = 7,
+  September = 8,
+  October = 9,
+  November = 10,
+  Dezember = 11,
+}
+
+export type { LinkedInProfile, Message, Language, Position, Education, Date };
+
+export { Month };

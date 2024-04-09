@@ -400,76 +400,76 @@ const fakeMessages: Message[] = [
     author: "BOT",
     text: "Why did the dog enter the chirch? Because the door was open.",
   },
-  {
-    id: "3",
-    author: "HUMAN",
-    text: "That is not so funny. Tell me another joke",
-  },
-  {
-    id: "4",
-    author: "BOT",
-    text: "Why are colds bad criminals? Because they're easy to catch.",
-  },
-  {
-    id: "5",
-    author: "HUMAN",
-    text: "Tell me a joke",
-  },
-  {
-    id: "6",
-    author: "BOT",
-    text: "Why did the dog enter the chirch? Because the door was open.",
-  },
-  {
-    id: "7",
-    author: "HUMAN",
-    text: "That is not so funny. Tell me another joke",
-  },
-  {
-    id: "8",
-    author: "BOT",
-    text: "Why are colds bad criminals? Because they're easy to catch.",
-  },
-  {
-    id: "9",
-    author: "HUMAN",
-    text: "Tell me a joke",
-  },
-  {
-    id: "10",
-    author: "BOT",
-    text: "Why did the dog enter the chirch? Because the door was open.",
-  },
-  {
-    id: "11",
-    author: "HUMAN",
-    text: "That is not so funny. Tell me another joke",
-  },
-  {
-    id: "12",
-    author: "BOT",
-    text: "Why are colds bad criminals? Because they're easy to catch.",
-  },
-  {
-    id: "13",
-    author: "HUMAN",
-    text: "Tell me a joke",
-  },
-  {
-    id: "14",
-    author: "BOT",
-    text: "Why did the dog enter the chirch? Because the door was open.",
-  },
-  {
-    id: "15",
-    author: "HUMAN",
-    text: "That is not so funny. Tell me another joke. That is not so funny. Tell me another joke That is not so funny. Tell me another joke That is not so funny. Tell me another joke",
-  },
-  {
-    id: "16",
-    author: "BOT",
-    text: "Why are colds bad criminals? Because they're easy to catch. Why are colds bad criminals? Because they're easy to catch. Why are colds bad criminals? Because they're easy to catch. Why are colds bad criminals? Because they're easy to catch. Why are colds bad criminals? Because they're easy to catch. Why are colds bad criminals? Because they're easy to catch.",
-  },
+  // {
+  //   id: "3",
+  //   author: "HUMAN",
+  //   text: "That is not so funny. Tell me another joke",
+  // },
+  // {
+  //   id: "4",
+  //   author: "BOT",
+  //   text: "Why are colds bad criminals? Because they're easy to catch.",
+  // },
+  // {
+  //   id: "5",
+  //   author: "HUMAN",
+  //   text: "Tell me a joke",
+  // },
+  // {
+  //   id: "6",
+  //   author: "BOT",
+  //   text: "Why did the dog enter the chirch? Because the door was open.",
+  // },
+  // {
+  //   id: "7",
+  //   author: "HUMAN",
+  //   text: "That is not so funny. Tell me another joke",
+  // },
+  // {
+  //   id: "8",
+  //   author: "BOT",
+  //   text: "Why are colds bad criminals? Because they're easy to catch.",
+  // },
+  // {
+  //   id: "9",
+  //   author: "HUMAN",
+  //   text: "Tell me a joke",
+  // },
+  // {
+  //   id: "10",
+  //   author: "BOT",
+  //   text: "Why did the dog enter the chirch? Because the door was open.",
+  // },
+  // {
+  //   id: "11",
+  //   author: "HUMAN",
+  //   text: "That is not so funny. Tell me another joke",
+  // },
+  // {
+  //   id: "12",
+  //   author: "BOT",
+  //   text: "Why are colds bad criminals? Because they're easy to catch.",
+  // },
+  // {
+  //   id: "13",
+  //   author: "HUMAN",
+  //   text: "Tell me a joke",
+  // },
+  // {
+  //   id: "14",
+  //   author: "BOT",
+  //   text: "Why did the dog enter the chirch? Because the door was open.",
+  // },
+  // {
+  //   id: "15",
+  //   author: "HUMAN",
+  //   text: "That is not so funny. Tell me another joke. That is not so funny. Tell me another joke That is not so funny. Tell me another joke That is not so funny. Tell me another joke",
+  // },
+  // {
+  //   id: "16",
+  //   author: "BOT",
+  //   text: "Why are colds bad criminals? Because they're easy to catch. Why are colds bad criminals? Because they're easy to catch. Why are colds bad criminals? Because they're easy to catch. Why are colds bad criminals? Because they're easy to catch. Why are colds bad criminals? Because they're easy to catch. Why are colds bad criminals? Because they're easy to catch.",
+  // },
 ];
 
 export { fakeResponse, fakeMessages };
