@@ -35,12 +35,8 @@ interface Position {
   companyIndustry: string;
   companyStaffCountRange: string;
   title: string;
-  multiLocaleTitle: {
-    de_DE: "Studentische Hilfskraft";
-  };
-  multiLocaleCompanyName: {
-    de_DE: "Technische Universität Dresden";
-  };
+  multiLocaleTitle: MultiLocaleProp;
+  multiLocaleCompanyName: MultiLocaleProp;
   location: string;
   description: string;
   employmentType: string;
@@ -94,7 +90,7 @@ interface LinkedInProfile {
   };
   languages: Language[];
   educations: Education[];
-  positions: Position[];
+  position: Position[];
   fullPositions: Position[];
   skills: Skill[];
   givenRecommendation: null;

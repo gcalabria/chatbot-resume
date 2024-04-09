@@ -3,10 +3,11 @@ import { Input } from "@/components/ui/input";
 import ChatMessage from "./ChatMessage";
 import { Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { fakeMessages } from "@/mocks";
+import { fakeMessages, fakeProfile } from "@/mocks";
 import { Message } from "@/interfaces";
 import ChatLoadingMessage from "./ChatLoadingMessage";
 import React from "react";
+import { linkedInProfileToText } from "@/langchain/utils";
 
 function ChatBoard() {
   const [messages] = useState<Message[]>(fakeMessages);
@@ -43,6 +44,11 @@ function ChatBoard() {
     });
     setInputMessage("");
     scrollToBottom();
+
+    const profile = fakeProfile;
+    const text = linkedInProfileToText(profile);
+
+    console.log(text);
   };
 
   let content;
