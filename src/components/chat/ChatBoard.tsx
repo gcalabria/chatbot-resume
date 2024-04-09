@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import ChatMessage from "./ChatMessage";
-import { ChevronRight } from "lucide-react";
+import { Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { fakeMessages } from "@/mocks";
 import { Message } from "@/interfaces";
@@ -22,9 +22,13 @@ function ChatBoard() {
         {content}
       </div>
       <div className="flex flex-row items-center p-2 border-t-2">
-        <Input id="chatInput" className="mr-2" />
+        <Input
+          placeholder="Ask me something..."
+          id="chatInput"
+          className="mr-2"
+        />
         <Button variant="outline" size="icon">
-          <ChevronRight className="h-4 w-4" />
+          <Send className="h-4 w-4" />
         </Button>
       </div>
     </div>
