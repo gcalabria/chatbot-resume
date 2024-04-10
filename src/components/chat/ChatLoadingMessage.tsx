@@ -10,7 +10,7 @@ function ChatLoadingMessage() {
   return (
     <div className={"flex self-start mr-20"}>
       <Avatar className="mr-4 h-8 w-8">
-        <AvatarImage src="https://github.com/shadcn.png" />
+        <AvatarImage src="src/assets/avatar.jpg" />
         {/* <AvatarFallback>{message.author}</AvatarFallback> */}
       </Avatar>
 
