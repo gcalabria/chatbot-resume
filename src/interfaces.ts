@@ -126,6 +126,14 @@ enum Month {
   Dezember = 11,
 }
 
-export type { LinkedInProfile, Message, Language, Position, Education, Date };
+export type {
+  LinkedInProfile,
+  Message,
+  Language,
+  Position,
+  Education,
+  Date,
+  Skill,
+};
 
 export { Month };
