@@ -2,14 +2,14 @@ import { LinkedInProfile, Message } from "./interfaces";
 
 const fakeProfile: LinkedInProfile = {
   firstName: "Guilherme",
-  lastName: "Calábria Lopes",
+  lastName: "Calabria Lopes",
   isOpenToWork: true,
   isHiring: false,
   profilePicture:
     "https://media.licdn.com/dms/image/C5603AQE1JMWe6xqg4Q/profile-displayphoto-shrink_800_800/0/1517524736301?e=1718236800&v=beta&t=jQ9Duco4Hb2CgGykmDIVG17JoZer0mjDelgi1wsyRrY",
   summary: "",
   headline:
-    "Studentische Hilfskraft @ Technische Universität Dresden | Information Retrieval, LLMs, Neural Networks, Deep Learning",
+    "AI Engineer with degrees in Computer Science and Mechanical Engineering, 2+ years of research experience in Information Retrieval, and 4+ years of experience developing full-stack web applications.",
   geo: {
     country: "Germany",
     city: "Berlin, Berlin",
@@ -17,24 +17,24 @@ const fakeProfile: LinkedInProfile = {
   },
   languages: [
     {
-      name: "Deutsch",
-      proficiency: "PROFESSIONAL_WORKING",
-    },
-    {
-      name: "Englisch",
+      name: "English",
       proficiency: "FULL_PROFESSIONAL",
     },
     {
-      name: "Portugiesisch",
+      name: "German",
+      proficiency: "PROFESSIONAL_WORKING",
+    },
+    {
+      name: "Portuguese",
       proficiency: "NATIVE_OR_BILINGUAL",
     },
     {
-      name: "Schwedisch",
-      proficiency: "ELEMENTARY",
+      name: "Spanish",
+      proficiency: "LIMITED_WORKING",
     },
     {
-      name: "Spanisch",
-      proficiency: "LIMITED_WORKING",
+      name: "Swedish",
+      proficiency: "ELEMENTARY",
     },
   ],
   educations: [
@@ -49,9 +49,9 @@ const fakeProfile: LinkedInProfile = {
         month: 10,
         day: 0,
       },
-      fieldOfStudy: "Informatik",
-      degree: "Diplom",
-      grade: "",
+      fieldOfStudy: "Computer Science",
+      degree: "Diploma",
+      grade: "1.8",
       schoolName: "Technische Universität Dresden",
       description: "",
       activities: "",
@@ -69,8 +69,8 @@ const fakeProfile: LinkedInProfile = {
         month: 0,
         day: 0,
       },
-      fieldOfStudy: "Maschinenbau",
-      degree: "Diplom-Ingenieur",
+      fieldOfStudy: "Mechanical Engineering",
+      degree: "Bachelor of Science - BS",
       grade: "",
       schoolName: "Universidade Federal de Minas Gerais",
       description: "",
@@ -89,7 +89,7 @@ const fakeProfile: LinkedInProfile = {
         month: 0,
         day: 0,
       },
-      fieldOfStudy: "Maschinenbau",
+      fieldOfStudy: "Mechanical Engineering",
       degree: "",
       grade: "",
       schoolName: "Technische Universität Bergakademie Freiberg",
@@ -108,14 +108,16 @@ const fakeProfile: LinkedInProfile = {
         "https://media.licdn.com/dms/image/C4D0BAQGSf2Po21RKDQ/company-logo_400_400/0/1630475865780/tu_dresden_logo?e=1720656000&v=beta&t=0s_h8wnQxOXNCNjdHT5gKq80sgAprzXH2cOirNDQAzQ",
       companyIndustry: "Research",
       companyStaffCountRange: "10001 - 0",
-      title: "Studentische Hilfskraft",
+      title: "Student Research Assistant",
       multiLocaleTitle: {
         de_DE: "Studentische Hilfskraft",
+        en_US: "Student Research Assistant",
       },
       multiLocaleCompanyName: {
         de_DE: "Technische Universität Dresden",
+        en_US: "Technische Universität Dresden",
       },
-      location: "Dresden, Sachsen, Deutschland",
+      location: "Dresden, Saxony, Germany",
       description:
         "Research into different methods for semantic code retrieval\n- Expand documents using LLMs to improve the efficiency of traditional IR techniques\n- Develop novel techniques to extract semantic information from code and use it to expand documents\n- Fine-tune LLMs for generative retrieval of mathematical documents",
       employmentType: "Part-time",
@@ -138,16 +140,19 @@ const fakeProfile: LinkedInProfile = {
         "https://media.licdn.com/dms/image/C4D0BAQG0Cu9gfQFZwQ/company-logo_400_400/0/1630561296168/descript_gmbh_logo?e=1720656000&v=beta&t=2Ub9bSLzqoNgQmIl7LphNy1Ym6PUs91Otzks8TYXR0k",
       companyIndustry: "Information Technology & Services",
       companyStaffCountRange: "11 - 50",
-      title: "Werkstudent Frontend Web Entwickler",
+      title: "Working Student Frontend Web Entwickler",
       multiLocaleTitle: {
         de_DE: "Werkstudent Frontend Web Entwickler",
+        en_US: "Working Student Frontend Web Entwickler",
       },
       multiLocaleCompanyName: {
         de_DE: "Descript GmbH",
+        en_US: "Descript GmbH",
       },
-      location: "Dresden und Umgebung, Deutschland",
-      description: "",
-      employmentType: "",
+      location: "Dresden, Germany",
+      description:
+        "- Developed web applications using VueJS and django \n- Developed cross-platform mobile application for iOS and Android \n- Developed and maintained websites using HTML, CSS and JS",
+      employmentType: "Part-time",
       start: {
         year: 2017,
         month: 8,
@@ -169,14 +174,16 @@ const fakeProfile: LinkedInProfile = {
         "https://media.licdn.com/dms/image/C4D0BAQGSf2Po21RKDQ/company-logo_400_400/0/1630475865780/tu_dresden_logo?e=1720656000&v=beta&t=0s_h8wnQxOXNCNjdHT5gKq80sgAprzXH2cOirNDQAzQ",
       companyIndustry: "Research",
       companyStaffCountRange: "10001 - 0",
-      title: "Studentische Hilfskraft",
+      title: "Student Research Assistant",
       multiLocaleTitle: {
         de_DE: "Studentische Hilfskraft",
+        en_US: "Student Research Assistant",
       },
       multiLocaleCompanyName: {
         de_DE: "Technische Universität Dresden",
+        en_US: "Technische Universität Dresden",
       },
-      location: "Dresden, Sachsen, Deutschland",
+      location: "Dresden, Saxony, Germany",
       description:
         "Research into different methods for semantic code retrieval\n- Expand documents using LLMs to improve the efficiency of traditional IR techniques\n- Develop novel techniques to extract semantic information from code and use it to expand documents\n- Fine-tune LLMs for generative retrieval of mathematical documents",
       employmentType: "Part-time",
@@ -199,16 +206,19 @@ const fakeProfile: LinkedInProfile = {
         "https://media.licdn.com/dms/image/C4D0BAQG0Cu9gfQFZwQ/company-logo_400_400/0/1630561296168/descript_gmbh_logo?e=1720656000&v=beta&t=2Ub9bSLzqoNgQmIl7LphNy1Ym6PUs91Otzks8TYXR0k",
       companyIndustry: "Information Technology & Services",
       companyStaffCountRange: "11 - 50",
-      title: "Werkstudent Frontend Web Entwickler",
+      title: "Working Student Frontend Web Entwickler",
       multiLocaleTitle: {
         de_DE: "Werkstudent Frontend Web Entwickler",
+        en_US: "Working Student Frontend Web Entwickler",
       },
       multiLocaleCompanyName: {
         de_DE: "Descript GmbH",
+        en_US: "Descript GmbH",
       },
-      location: "Dresden und Umgebung, Deutschland",
-      description: "",
-      employmentType: "",
+      location: "Dresden, Germany",
+      description:
+        "- Developed web applications using VueJS and django \n- Developed cross-platform mobile application for iOS and Android \n- Developed and maintained websites using HTML, CSS and JS",
+      employmentType: "Part-time",
       start: {
         year: 2017,
         month: 8,
@@ -222,6 +232,18 @@ const fakeProfile: LinkedInProfile = {
     },
   ],
   skills: [
+    {
+      name: "HTML",
+    },
+    {
+      name: "Bootstrap (Framework)",
+    },
+    {
+      name: "TypeScript",
+    },
+    {
+      name: "Python (Programming Language)",
+    },
     {
       name: "Linux",
     },
@@ -270,18 +292,6 @@ const fakeProfile: LinkedInProfile = {
     {
       name: "PyTorch",
     },
-    {
-      name: "Huggingface",
-    },
-    {
-      name: "Microsoft Office",
-    },
-    {
-      name: "Microsoft Excel",
-    },
-    {
-      name: "Englisch",
-    },
   ],
   givenRecommendation: null,
   receivedRecommendation: null,
@@ -325,18 +335,25 @@ const fakeProfile: LinkedInProfile = {
   volunteering: null,
   supportedLocales: [
     {
+      country: "US",
+      language: "en",
+    },
+    {
       country: "DE",
       language: "de",
     },
   ],
   multiLocaleFirstName: {
     de: "Guilherme",
+    en: "Guilherme",
   },
   multiLocaleLastName: {
     de: "Calábria Lopes",
+    en: "Calabria Lopes",
   },
   multiLocaleHeadline: {
-    de: "Studentische Hilfskraft @ Technische Universität Dresden | Information Retrieval, LLMs, Neural Networks, Deep Learning",
+    de: "Information Retrieval, LLMs, Neural Networks, Deep Learning, Web Development",
+    en: "AI Engineer with degrees in Computer Science and Mechanical Engineering, 2+ years of research experience in Information Retrieval, and 4+ years of experience developing full-stack web applications.",
   },
 };
 
