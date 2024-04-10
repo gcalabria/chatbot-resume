@@ -5,6 +5,7 @@ import {
   Education,
   Date,
   Month,
+  Skill,
 } from "@/interfaces";
 import { Document } from "langchain/document";
 
@@ -38,15 +39,19 @@ function positionsToText(positions: Position[]) {
     if (i === num_positions - 1) {
       text =
         text +
-        ` and at ${pos.companyName} as a ${pos.title} from ${dateToText(
-          pos.start
-        )} until ${dateToText(pos.end)}. `;
+        `I have also worked at ${pos.companyName} as a ${
+          pos.title
+        } from ${dateToText(pos.start)} until ${dateToText(
+          pos.end
+        )}. My main activities there included: ${pos.description}. `;
     } else {
       text =
         text +
         ` at ${pos.companyName} as a ${pos.title} from ${dateToText(
           pos.start
-        )} until ${dateToText(pos.end)},`;
+        )} until ${dateToText(pos.end)}. My main activities there included: ${
+          pos.description
+        }.`;
     }
   });
   return text;
@@ -76,6 +81,22 @@ function educationsToText(educations: Education[]) {
   return text;
 }
 
+function skillsToText(skills: Skill[]) {
+  const num_skills = skills.length;
+  if (num_skills === 0) {
+    return;
+  }
+  let text = `Throughout my career I could accumulate skills like: `;
+  skills.forEach((skill, i) => {
+    if (i === num_skills - 1) {
+      text = text + `and ${skill.name}. `;
+    } else {
+      text = text + `${skill.name}, `;
+    }
+  });
+  return text;
+}
+
 function linkedInProfileToText(profile: LinkedInProfile) {
   let text =
     `My name is ${profile.firstName} ${profile.lastName}. ` +
@@ -86,6 +107,10 @@ function linkedInProfileToText(profile: LinkedInProfile) {
   text = text + educationsToText(profile.educations);
 
   text = text + positionsToText(profile.position);
+
+  text = text + skillsToText(profile.skills);
+
+  text = text + `In summary, I am a ${profile.headline}`;
 
   return text;
 }
