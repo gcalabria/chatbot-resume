@@ -3,14 +3,13 @@ import { Input } from "@/components/ui/input";
 import ChatMessage from "./ChatMessage";
 import { Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { fakeMessages, fakeProfile } from "@/mocks";
 import { Message } from "@/interfaces";
 import ChatLoadingMessage from "./ChatLoadingMessage";
 import React from "react";
-import { linkedInProfileToText } from "@/langchain/utils";
+import { chain } from "@/langchain/langchain";
 
 function ChatBoard() {
-  const [messages] = useState<Message[]>(fakeMessages);
+  const [messages] = useState<Message[]>([]);
   const [inputMessage, setInputMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
@@ -34,7 +33,7 @@ function ChatBoard() {
     setInputMessage(event.currentTarget.value);
   };
 
-  const handleSendMessage = (event: React.FormEvent) => {
+  const handleSendMessage = async (event: React.FormEvent) => {
     event.preventDefault();
     setIsLoading(true);
     messages.push({
@@ -45,15 +44,46 @@ function ChatBoard() {
     setInputMessage("");
     scrollToBottom();
 
-    const profile = fakeProfile;
-    const text = linkedInProfileToText(profile);
+    const response = await chain.invoke({
+      question: inputMessage,
+    });
 
-    console.log(text);
+    messages.push({
+      id: `${messages.length + 1}`,
+      author: "BOT",
+      text: response,
+    });
+
+    setIsLoading(false);
+    scrollToBottom();
+
+    // // Add documents (linkedin profile) to supabase vectorstore
+    // const profile = fakeProfile;
+    // const text = linkedInProfileToText(profile);
+    // const output = await splitter.createDocuments([text]);
+    // console.log(output);
+
+    // // add docs to supabase table
+    // const vectorStore = await SupabaseVectorStore.fromDocuments(
+    //   output,
+    //   embeddings,
+    //   {
+    //     client: supabaseClient,
+    //     tableName: SUPABASE_TABLE_NAME,
+    //   }
+    // );
+    // console.log(vectorStore);
   };
 
   let content;
   if (messages.length === 0) {
-    content = <p>No messages</p>;
+    content = (
+      <div className="flex flex-col flex-grow items-center justify-center">
+        <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">
+          Ask me something about me career :)
+        </h2>
+      </div>
+    );
   } else {
     content = messages.map((msg) => <ChatMessage key={msg.id} message={msg} />);
   }
