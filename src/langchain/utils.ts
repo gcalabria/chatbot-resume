@@ -6,6 +6,7 @@ import {
   Date,
   Month,
 } from "@/interfaces";
+import { Document } from "langchain/document";
 
 function dateToText(date: Date) {
   return `${Month[date.month]} ${date.year}`;
@@ -89,4 +90,8 @@ function linkedInProfileToText(profile: LinkedInProfile) {
   return text;
 }
 
-export { linkedInProfileToText };
+function combineDocuments(docs: Document[]) {
+  return docs.map((doc) => doc.pageContent).join("\n\n");
+}
+
+export { linkedInProfileToText, combineDocuments };
