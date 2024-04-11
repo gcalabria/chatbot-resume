@@ -5,18 +5,7 @@ import { Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Message } from "@/interfaces";
 import ChatLoadingMessage from "./ChatLoadingMessage";
-import React from "react";
-import {
-  chain,
-  // embeddings,
-  // splitter,
-  // supabaseClient,
-} from "@/langchain/langchain";
-// import axios from "axios";
-// import { linkedInProfileToText } from "@/langchain/utils";
-// import { SupabaseVectorStore } from "@langchain/community/vectorstores/supabase";
-// import { SUPABASE_TABLE_NAME } from "@/constants";
-// import { fakeProfile } from "@/mocks";
+import { getAnswer } from "@/api";
 
 function ChatBoard() {
   const [messages] = useState<Message[]>([]);
@@ -54,49 +43,16 @@ function ChatBoard() {
     setInputMessage("");
     scrollToBottom();
 
-    const response = await chain.invoke({
-      question: inputMessage,
-    });
+    const answer = await getAnswer({ question: inputMessage });
 
     messages.push({
       id: `${messages.length + 1}`,
       author: "BOT",
-      text: response,
+      text: answer,
     });
 
     setIsLoading(false);
     scrollToBottom();
-
-    // // Crawl linkedin profile
-    // const response = await axios.get("https://linkedin-api8.p.rapidapi.com/", {
-    //   headers: {
-    //     "X-RapidAPI-Key": "b551f4841amsh8279ccf4c2a4582p1937c2jsnd5fea3ce5a6b",
-    //     "X-RapidAPI-Host": "linkedin-api8.p.rapidapi.com",
-    //   },
-    //   params: {
-    //     username: "gcalabria",
-    //   },
-    // });
-
-    // const profile = response.data;
-
-    // // Add documents (linkedin profile) to supabase vectorstore
-    // const profile = fakeProfile;
-    // const text = linkedInProfileToText(profile);
-    // console.log(text);
-    // const output = await splitter.createDocuments([text]);
-    // console.log(output);
-
-    // // add docs to supabase table
-    // const vectorStore = await SupabaseVectorStore.fromDocuments(
-    //   output,
-    //   embeddings,
-    //   {
-    //     client: supabaseClient,
-    //     tableName: SUPABASE_TABLE_NAME,
-    //   }
-    // );
-    // console.log(vectorStore);
   };
 
   let content;
