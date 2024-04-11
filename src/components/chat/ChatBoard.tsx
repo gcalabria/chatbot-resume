@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { Input } from "@/components/ui/input";
-import ChatMessage from "./ChatMessage";
 import { Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Message } from "@/interfaces";
 import ChatLoadingMessage from "./ChatLoadingMessage";
 import { getAnswer } from "@/api";
+import BotChatMessage from "./BotChatMessage";
+import HumanChatMessage from "./HumanChatMessage";
 
 function ChatBoard() {
   const [messages] = useState<Message[]>([]);
@@ -65,7 +66,12 @@ function ChatBoard() {
       </div>
     );
   } else {
-    content = messages.map((msg) => <ChatMessage key={msg.id} message={msg} />);
+    content = messages.map((msg) => {
+      if (msg.author === "BOT") {
+        return <BotChatMessage key={msg.id} message={msg} />;
+      }
+      return <HumanChatMessage key={msg.id} message={msg} />;
+    });
   }
 
   return (
